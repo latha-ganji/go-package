@@ -1,12 +1,19 @@
-package testPackage
+package main
 
-import "fmt"
+import (
+	"fmt"
+
+	a "github.com/latha-ganji/go-package/testPackage"
+)
 
 func main() {
 	fmt.Println("hello")
-	fmt.Println(add(10, 20))
+	fmt.Println(Add(10, 20))
+
+	var message = a.TestPackageLib("Hello Latha")
+	fmt.Println(message)
 }
 
-func add(a, b int) int {
+func Add(a, b int) int {
 	return a + b
 }
